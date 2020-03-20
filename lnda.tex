@@ -5,8 +5,13 @@
 %-- layout
 \usepackage[margin=1.2in]{geometry}
 
-
+%--
 \usepackage{url, hyperref}
+
+
+%-- user-defined commands
+\newcommand{\mybreak}{\vspace{1cm}}
+
 
 %--
 \begin{document}
@@ -36,7 +41,24 @@
 
 YCSB \cite{Cooper10, YCSB-github}
 
+
+\mybreak
+
 计算模型的基础是抽象。首先介绍各种抽象。然后介绍由各种不同抽象，组合而来的各种模型 \cite{Cachin11}。
+
+
+\mybreak
+
+process groups，group membership。
+
+virtual synchrony。
+
+\cite{Bost10} (第六章)
+
+Process groups are a powerful tool for the developer. They can have names, much like files, and this allows them to be treated like topics in a publish-subscribe system. 
+
+One thinks of a process group as a kind of object (abstract data type), and the processes that join the group as importing a replica of that object. Virtual synchrony standardizes the handling of group membership: the system tracks group members, and informs members each time the membership changes, an event called a view change.
+
 
 
 %-- bib
