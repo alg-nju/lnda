@@ -35,36 +35,33 @@
 %----------------------------------------
 \chapter{分布式算法简介}
 
+\cite{Barroso18}
+
+多数据中心平台，从硬件设施，到软件基础设施(infrastructure)的介绍。
+
 
 %----------------------------------------
 \chapter{分布式计算模型}
 
+计算模型的基础是抽象。首先介绍各种抽象。然后介绍由各种不同抽象，组合而来的各种模型 \cite{Cachin11}。
+
 
 %--------------------------------------------------------------------------------
-\part{经典算法}
+\part{消息传递算法}
+
+
+%--------------------------------------------------------------------------------
+\part{共享存储算法}
 
 
 %--------------------------------------------------------------------------------
 \part{进阶专题}
 
 
-%--------------------------------------------------------------------------------
-\part{系统案例}
+\chapter{专题1}
 
 
-%--
-\chapter*{素材}
-
-
-YCSB \cite{Cooper10, YCSB-github}
-
-
-\mybreak
-
-计算模型的基础是抽象。首先介绍各种抽象。然后介绍由各种不同抽象，组合而来的各种模型 \cite{Cachin11}。
-
-
-\mybreak
+【virtual synchrony】
 
 process groups，group membership。
 
@@ -76,15 +73,25 @@ Process groups are a powerful tool for the developer. They can have names, much 
 
 One thinks of a process group as a kind of object (abstract data type), and the processes that join the group as importing a replica of that object. Virtual synchrony standardizes the handling of group membership: the system tracks group members, and informs members each time the membership changes, an event called a view change.
 
-
 \mybreak
 
-\cite{Barroso18}
+【混合BFT】
 
-多数据中心平台，从硬件设施，到软件基础设施(infrastructure)的介绍。
+有些机器只会crash，不会叛变 \cite{Vukotic19}。
+
+区块链领域也使用这个假设，来提升区块链共识的速度 \cite{Dang19}。
+
+提供满足这种假设的off-the-shelf hardware systems，例如Intel的Software Guard Extensions (SGX) \cite{McKeen13}。
 
 
-\mybreak
+%--------------------------------------------------------------------------------
+\part{实际案例}
+
+
+%----------------------------------------
+\chapter{案例1}
+
+【系统类：cloud data store】
 
 \cite{Bravo15}
 
@@ -93,9 +100,37 @@ One thinks of a process group as a kind of object (abstract data type), and the 
 分布式系统中(主要是cloud data store中)对于ordering of events的tracking。弱一致系统，强一致系统中的clock的设计。
 
 
+\mybreak
+
+【工具类：TLA+】
+
+
+\cite{TLA-Github}。
+
+
+
+%--
+\chapter*{素材}
+
+
+YCSB \cite{Cooper10, YCSB-Github}
+
+
+
+
+
+
+
+
+
+
+
+
+
 %-- bib
-\bibliographystyle{plain}
+%\bibliographystyle{apalike}
 %\bibliographystyle{acm}
+\bibliographystyle{abbrv}
 \bibliography{lnda}
 
 
