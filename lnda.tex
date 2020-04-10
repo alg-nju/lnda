@@ -8,6 +8,9 @@
 %--
 \usepackage{url, hyperref}
 
+%--
+\usepackage{natbib}
+
 
 %-- user-defined commands
 \newcommand{\mybreak}{\vspace{1cm}}
@@ -49,6 +52,38 @@
 %--------------------------------------------------------------------------------
 \part{消息传递算法}
 
+%----------------------------------------
+\chapter{MSG算法1}
+
+
+
+%----------------------------------------
+\chapter{Paxos及其变体}
+
+// ? Raft是单独列一张，还是看作Paxos的变体一起讲？
+
+// 有一些变体，例如ParallelRaft，会综合Paxos和Raft的技术
+
+
+%----------------------------------------
+\chapter{VR和PBFT}
+
+%--------------------
+\section{Viewstamped Replication}
+
+// 按照\citep[Chap.7]{Bost10}的方式阐述。
+
+%--------------------
+\section{Practical Byzantine Fault Tolerance}
+
+PBFT的历史。
+
+首先理解PBFT的一个简化版本。最终的版本有很多实际的细节，与理解算法的精髓是关联不紧密的。
+
+完整的PBFT。
+
+\citep[Chap.7]{Bost10}
+
 
 %--------------------------------------------------------------------------------
 \part{共享存储算法}
@@ -57,7 +92,7 @@
 %--------------------------------------------------------------------------------
 \part{进阶专题}
 
-
+%----------------------------------------
 \chapter{专题1}
 
 
@@ -67,7 +102,7 @@ process groups，group membership。
 
 virtual synchrony。
 
-\cite{Bost10} (第六章)
+\cite[Chap.6]{Bost10}
 
 Process groups are a powerful tool for the developer. They can have names, much like files, and this allows them to be treated like topics in a publish-subscribe system. 
 
@@ -108,12 +143,18 @@ One thinks of a process group as a kind of object (abstract data type), and the 
 \cite{TLA-Github}。
 
 
+\mybreak
+
+【工具：benchmarking，评测】
+
+YCSB \cite{Cooper10, YCSB-Github}
+
+
 
 %--
 \chapter*{素材}
 
 
-YCSB \cite{Cooper10, YCSB-Github}
 
 
 
